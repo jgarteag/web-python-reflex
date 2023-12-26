@@ -184,6 +184,8 @@
 
 .venv/
 
+__pycache__/
+
 .web
 
 .webassets-cache
