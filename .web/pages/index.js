@@ -1,8 +1,9 @@
 
 /** @jsxImportSource @emotion/react */import { Fragment } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, HStack, Image as ChakraImage, Spacer, Text, VStack } from "@chakra-ui/react"
+import { Box, HStack, Image as ChakraImage, Link, Spacer, Text, VStack } from "@chakra-ui/react"
 import "focus-visible/dist/focus-visible"
+import NextLink from "next/link"
 import NextHead from "next/head"
 
 
@@ -20,6 +21,15 @@ export default function Component() {
   {`Juanma´s Page`}
 </Text>
   <Spacer/>
+  <Link as={NextLink} className={`nes-icon github is-medium`} href={`https://github.com/juanmgart92`} isExternal={true}>
+  {``}
+</Link>
+  <Link as={NextLink} className={`nes-icon youtube is-medium`} href={`https://www.youtube.com/@juanmgart/videos`} isExternal={true}>
+  {``}
+</Link>
+  <Link as={NextLink} className={`nes-icon linkedin is-medium`} href={`https://www.linkedin.com/in/juanmagart`} isExternal={true}>
+  {``}
+</Link>
 </HStack>
 </VStack>
 </Box>
