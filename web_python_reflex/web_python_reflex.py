@@ -1,10 +1,20 @@
 import reflex as rx
 import web_python_reflex.styles.styles as styles
+from web_python_reflex.styles.styles import Size
 from web_python_reflex.views.navbar import navbar
+from web_python_reflex.views.header import header
+
 
 def index() -> rx.Component:
     return rx.box(
-        navbar()
+        navbar(),
+        rx.center(
+            rx.vstack(
+                header(),
+                width="100%",
+                spacing=Size.VERY_BIG.value
+            )
+        )
 )
 
 app = rx.App(

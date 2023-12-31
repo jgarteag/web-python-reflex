@@ -8,7 +8,7 @@ def navbar() -> rx.Component:
         rx.hstack(
             rx.image(
                 src="logojuan.png",
-                alt="Juanmas Logo",
+                alt="Logo juanma",
                 width=Size.VERY_BIG.value,
                 height=Size.VERY_BIG.value,
             ),
