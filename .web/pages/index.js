@@ -15,6 +15,9 @@ export default function Component() {
     <Fragment>
   <Fragment_fd0e7cb8f9fb4669a6805377d925fba0/>
   <Box>
+  <Script strategy={`afterInteractive`}>
+  {`document.documentElement.lang='es'`}
+</Script>
   <Script src={`/js/snow.js`} strategy={`afterInteractive`}/>
   <VStack sx={{"bg": "#212529", "position": "sticky", "borderBottom": "0.25em solid #D3D3D3", "paddingX": "2em", "paddingY": "1em", "zIndex": "999", "top": "0", "width": "100%"}}>
   <HStack sx={{"width": "100%"}}>
