@@ -2,8 +2,8 @@
 
 ## Estructura del Proyecto 🏗️
 
-* **adeviento_web**: Contiene el código fuente principal.
-	* **adeviento_web.py**: Punto de inicio del sitio web.
+* **web-python-reflex**: Contiene el código fuente principal.
+	* **web-python-reflex.py**: Punto de inicio del sitio web.
 	* **constants.py**: Definición de constantes utilizadas en el sitio.
 	* **styles**: Directorio de estilos (css, colores y fuentes).
 	* **views**: Directorio de vistas (secciones gráficas).
@@ -21,13 +21,13 @@
 2. Clona ese repositorio en tu máquina local.
 
     ```bash 
-    git clone https://github.com/<USERNAME>/adeviento-web.git
+    git clone url
     ```
 
 3. Navega al directorio del proyecto.
 
     ```bash
-    cd adeviento
+    cd web-python-reflex
     ```
 
 4. Crea un entorno virtual.
