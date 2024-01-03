@@ -1,6 +1,7 @@
 import reflex as rx 
 import web_python_reflex.styles.styles as styles   
 from web_python_reflex.styles.styles import Size, TextColor
+import web_python_reflex.constants as constants
 
 def header() -> rx.Component:
     return rx.vstack(
@@ -21,12 +22,14 @@ def header() -> rx.Component:
                 rx.box(
                     rx.text("¡Hi Coders!"),
                     rx.text("I´m Juan Manuel"),
+                    class_name="nes-balloon from-left is-dark"
                 ),
                 rx.span(
                     "I am a dedicated software engineer with a track record of leading projects and crafting inventive solutions. My emphasis lies in enhancing operational efficiency and ensuring code quality for ",
                     rx.span(
                         "outstanding outcomes",
                         color= TextColor.ACCENT.value,
+                        font_size=Size.DEFAULT.value
                     ),
                     "!"
                 ),
@@ -34,8 +37,8 @@ def header() -> rx.Component:
                     "My website, built in Python using the REFLEX framework, aims to deliver an exceptional user experience by creating intuitive and efficient user interfaces."
                 ),
                 rx.link(
-                    "#REFLEXWebDev",
-                    href="",
+                    "#REFLEX",
+                    href=constants.HASHTAG_URL,
                     is_external=True,
                     color = TextColor.TERTIARY.value,
                     padding_top = Size.BIG.value,

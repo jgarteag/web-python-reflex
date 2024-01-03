@@ -41,7 +41,7 @@ export default function Component() {
   <Flex sx={{"flexDirection": ["column", "column", "column", "row", "row"]}}>
   <ChakraImage alt={`Logo juanma`} src={`logojuan.png`} sx={{"width": "16em", "height": "16em", "marginRight": "2em"}}/>
   <VStack alignItems={`start`}>
-  <Box>
+  <Box className={`nes-balloon from-left is-dark`}>
   <Text>
   {`¡Hi Coders!`}
 </Text>
@@ -49,18 +49,18 @@ export default function Component() {
   {`I´m Juan Manuel`}
 </Text>
 </Box>
-  <Text as={`span`}>
+  <Text as={`span`} sx={{"fontSize": "0.8em"}}>
   {`I am a dedicated software engineer with a track record of leading projects and crafting inventive solutions. My emphasis lies in enhancing operational efficiency and ensuring code quality for `}
-  <Text as={`span`} sx={{"color": "#EA5940 !important"}}>
+  <Text as={`span`} sx={{"color": "#EA5940 !important", "fontSize": "1em"}}>
   {`outstanding outcomes`}
 </Text>
   {`!`}
 </Text>
-  <Text as={`span`}>
+  <Text as={`span`} sx={{"fontSize": "0.8em"}}>
   {`My website, built in Python using the REFLEX framework, aims to deliver an exceptional user experience by creating intuitive and efficient user interfaces.`}
 </Text>
-  <Link as={NextLink} href={``} isExternal={true} sx={{"color": "#D3D3D3", "paddingTop": "2em", "fontSize": "0.8em", "textDecoration": "none", "_hover": {"color": "#EA5940 !important", "textDecoration": "none"}}}>
-  {`#REFLEXWebDev`}
+  <Link as={NextLink} href={`https://reflex.dev/`} isExternal={true} sx={{"color": "#D3D3D3", "paddingTop": "2em", "fontSize": "0.8em", "textDecoration": "none", "_hover": {"color": "#EA5940 !important", "textDecoration": "none"}}}>
+  {`#REFLEX`}
 </Link>
 </VStack>
 </Flex>

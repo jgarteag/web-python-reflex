@@ -31,6 +31,9 @@ BASE_STYLE = {
             "color": TextColor.ACCENT.value,
             "text_decoration": "none"
         }
+    },
+    rx.Span: {
+        "font_size": Size.MEDIUM.value
     }
 }
 
