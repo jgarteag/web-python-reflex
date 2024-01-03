@@ -34,7 +34,7 @@ export default function Component() {
 </VStack>
   <Center>
   <VStack spacing={`4em`} sx={{"width": "100%"}}>
-  <VStack sx={{"alignItems": "start", "paddingX": "2em", "width": "100%", "maxWidth": "1000px", "paddingTop": "4em"}}>
+  <VStack sx={{"alignItems": "center", "paddingX": "2em", "width": "100%", "maxWidth": "1000px", "paddingTop": "4em"}}>
   <Heading size={`lg`} sx={{"paddingBottom": "1em", "color": "#EA5940 !important", "fontFamily": "Press Start 2P"}}>
   {`Welcome to my page!`}
 </Heading>
@@ -65,6 +65,20 @@ export default function Component() {
 </VStack>
 </Flex>
 </VStack>
+  <HStack alignItems={`center`} sx={{"alignItems": "center", "paddingX": "2em", "width": "100%", "maxWidth": "1000px", "paddingBottom": "2em"}}>
+  <VStack alignItems={`start`} spacing={`0.8em`}>
+  <Text sx={{"fontSize": "0.8em", "marginBottom": "0px !important"}}>
+  {`© 2024 Juan Manuel Guerrero`}
+</Text>
+  <Link as={``} isExternal={true} sx={{"fontSize": "0.8em", "color": "#D3D3D3", "textDecoration": "none", "_hover": {"color": "#EA5940 !important", "textDecoration": "none"}}}>
+  {`Creado con `}
+  <Box className={`nes-icon is-small heart`}/>
+  {` por Juanmgart`}
+</Link>
+</VStack>
+  <Spacer/>
+  <ChakraImage alt={`Logo juanma y simbolo coder`} className={`nes-avatar is-large`} src={`juanmgart.png`} sx={{"width": "4em", "height": "4em"}}/>
+</HStack>
 </VStack>
 </Center>
 </Box>
