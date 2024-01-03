@@ -7,6 +7,7 @@ from web_python_reflex.views.footer import footer
 
 def index() -> rx.Component:
     return rx.box(
+        rx.script(src="/js/snow.js"),
         navbar(),
         rx.center(
             rx.vstack(
