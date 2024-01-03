@@ -1,52 +1,96 @@
-# Manual de Usuario: Aplicación Web con Python y Reflex
+# Proyecto: Adeviento Web 🌐
 
-echo "¡Bienvenido! 🚀 Aquí tienes el manual de usuario para tu aplicación web creada con Python y Reflex."
+## Estructura del Proyecto 🏗️
 
-# Requisitos Previos
-echo "## Requisitos Previos"
-echo "- Asegúrate de tener Python instalado. Puedes descargarlo desde [python.org](https://www.python.org/)."
-echo "- Acceso a la línea de comandos o terminal."
+* **adeviento_web**: Contiene el código fuente principal.
+	* **adeviento_web.py**: Punto de inicio del sitio web.
+	* **constants.py**: Definición de constantes utilizadas en el sitio.
+	* **styles**: Directorio de estilos (css, colores y fuentes).
+	* **views**: Directorio de vistas (secciones gráficas).
+	* **components**: Directorio de componentes (elementos gráficos con menor entidad que una vista).
+* **assets**: Recursos gráficos y utilidades JavaScript (nive y cuenta atrás).
+* **rxconfig.py**: Configuración principal del proyecto (por defecto).
+* **requirements.txt**: Lista de dependencias del proyecto para su ejecución.
+* **build.sh**: Script de generación estática de la web para producción.
+* **[generado] public**: Empaquetado estático del proyecto desplegable en producción (HTML, CSS, JS e imágenes).
 
-# Pasos para la Implementación
-echo "## Pasos para la Implementación"
+## Configuración en Local 🖥️
 
-# Paso 1: Clonar el Repositorio
-echo "### Paso 1: Clonar el Repositorio"
-echo "```bash"
-echo "git clone [URL_DEL_REPOSITORIO]"
-echo "cd [NOMBRE_DEL_DIRECTORIO]"
-echo "```"
+1. Haz un `Fork` del repositorio.
 
-# Paso 2: Crear y Activar un Ambiente Virtual
-echo "### Paso 2: Crear y Activar un Ambiente Virtual"
-echo "```bash"
-echo "python -m venv .myenv"
-echo "source .myenv/bin/activate  # ⚙️ Para sistemas basados en Unix/Linux"
-echo "# o"
-echo ".\\.myenv\\Scripts\\activate  # ⚙️ Para sistemas basados en Windows"
-echo "```"
+2. Clona ese repositorio en tu máquina local.
 
-# Paso 3: Instalar Reflex
-echo "### Paso 3: Instalar Reflex"
-echo "```bash"
-echo "pip install reflex"
-echo "```"
+    ```bash 
+    git clone https://github.com/<USERNAME>/adeviento-web.git
+    ```
 
-# Paso 4: Inicializar Reflex
-echo "### Paso 4: Inicializar Reflex"
-echo "```bash"
-echo "reflex init"
-echo "```"
+3. Navega al directorio del proyecto.
 
-# Paso 5: Ejecutar la Aplicación
-echo "### Paso 5: Ejecutar la Aplicación"
-echo "```bash"
-echo "reflex run"
-echo "```"
+    ```bash
+    cd adeviento
+    ```
 
-# Notas Adicionales
-echo "## Notas Adicionales"
-echo "- Puedes personalizar y desarrollar tu aplicación en el directorio de trabajo."
-echo "- Asegúrate de mantener activo el entorno virtual mientras trabajas en tu aplicación."
+4. Crea un entorno virtual.
 
-echo "¡Listo para despegar! 🚀 Si encuentras algún problema o necesitas más ayuda, consulta la documentación de Reflex en [https://reflex.dev/](https://reflex.dev/) o revisa el código fuente de tu aplicación para realizar ajustes según sea necesario. ¡Éxito con tu proyecto! 🌟"
+    ```bash
+    python3 -m venv venv
+    ```
+
+5. Activa el entorno virtual.
+
+    ```bash
+    source venv/bin/activate
+    ```
+
+6. Instala las dependencias.
+
+    ```bash
+    python -m pip install -r requirements.txt
+    ```
+
+7. Inicializa el proyecto de Reflex.
+
+    ```bash
+    reflex init
+    ```
+
+8. Ejecuta el proyecto en local.
+
+    ```bash
+    reflex run
+    ```
+
+    *Podrás acceder a él entrando en la url `http://localhost:3000/` desde el navegador.*
+
+> Para más información sobre [Reflex](https://reflex.dev/), consulta su [documentación oficial](https://reflex.dev/docs).
+
+## Despliegue 🚀
+
+Para realizar el despliegue del proyecto, utiliza el archivo `build.sh`. Este script ejecuta el flujo necesario para generar el directorio `public` con todos los recursos estáticos necesarios para el servidor web.
+
+El repositorio siempre cuenta con el directorio `public` para que puedas revisar el contenido estático de la web sin ejecutar el script `build.sh`.
+
+```bash
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+reflex init
+reflex export --frontend-only
+rm -fr public
+unzip frontend.zip -d public
+rm -f frontend.zip
+deactivate
+
+
+## Recursos utilizados
+
+![Python](https://img.shields.io/github/stars/python/cpython?label=Python&style=social)
+![Reflex](https://img.shields.io/github/stars/reflex-dev/reflex?label=Reflex&style=social)
+![NES.css](https://img.shields.io/github/stars/nostalgic-css/NES.css?label=NES.css&style=social)
+![Vercel](https://img.shields.io/github/stars/vercel/vercel?label=Vercel&style=social)
+
+* Lenguaje: [Python](https://www.python.org/)
+* Framework: [Reflex](https://reflex.dev/)
+* CSS: [NES.css](https://nostalgic-css.github.io/NES.css/)
+* Fuente: [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)
+* Hosting: [Vercel](https://vercel.com/)
